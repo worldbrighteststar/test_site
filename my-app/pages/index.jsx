@@ -1,16 +1,12 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import ProductList from '@/components/ProductList';
 
 function ProductPage() {
-	const [products, setProducts] = useState();
-	useEffect(() => {
-		axios.get('http://localhost:4000/products').then(response => {
-			setProducts(response.data);
-		});
-	}, []);
-
-	console.log(products);
-	return <div style={{ color: 'blue' }}>Hello Next</div>;
+	return (
+		<div>
+			<h1>Products</h1>
+			<ProductList></ProductList>
+		</div>
+	);
 }
 
 /**
