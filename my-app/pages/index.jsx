@@ -1,9 +1,11 @@
+import ProductHeader from '@/components/ProductHeader';
 import ProductList from '@/components/ProductList';
 
 function ProductPage() {
+	const headerTitle = 'Product List';
 	return (
 		<div>
-			<h1>Products</h1>
+			<ProductHeader title={headerTitle} />
 			<ProductList></ProductList>
 		</div>
 	);
