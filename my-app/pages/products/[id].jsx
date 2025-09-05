@@ -1,27 +1,26 @@
 import { fetchProductById } from '@/api';
 import ProductHeader from '@/components/ProductHeader';
+import ProductInfo from '@/components/ProductInfo';
 import axios from 'axios';
 
-export default function ProductDatialPage({ productId, productInfo }) {
+export default function ProductDetailPage({ productDetail }) {
 	const headerTitle = 'Product Detail Page';
 
 	return (
 		<div>
 			<ProductHeader title={headerTitle} />
-			<div>Product Id : {productId}</div>
-			<div>Product Name : {productInfo.name}</div>
+			<ProductInfo productDetail={productDetail}></ProductInfo>
 		</div>
 	);
 }
 
 export async function getServerSideProps(context) {
 	const id = context.params.id;
-	const response = await fetchProductById(id);
+	const { data } = await fetchProductById(id);
 
 	return {
 		props: {
-			productId: context.params.id,
-			productInfo: response.data,
+			productDetail: data,
 		},
 	};
 }
