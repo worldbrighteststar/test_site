@@ -16,7 +16,7 @@ export default function ProductInfo({ productDetail }) {
 			<div className={styles.description}>
 				<p>{productDetail.name}</p>
 				<p>{productDetail.price}</p>
-				<button>put in cart</button>
+				<button>Add to Cart</button>
 			</div>
 		</div>
 	);
