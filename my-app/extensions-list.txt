@@ -1,0 +1,5 @@
+Extensions installed on WSL: Ubuntu-24.04:
+burkeholland.simple-react-snippets
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+tobermory.es6-string-html
