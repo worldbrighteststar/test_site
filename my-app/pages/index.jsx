@@ -1,5 +1,5 @@
-import ProductHeader from '@/components/ProductHeader';
-import ProductList from '@/components/ProductList';
+import ProductHeader from '@/components/product/ProductHeader';
+import ProductList from '@/components/product/ProductList';
 
 function ProductPage() {
 	const headerTitle = 'Product List';

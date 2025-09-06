@@ -1,6 +1,6 @@
 import { fetchProductById } from '@/api';
-import ProductHeader from '@/components/ProductHeader';
-import ProductInfo from '@/components/ProductInfo';
+import ProductHeader from '@/components/product/ProductHeader';
+import ProductInfo from '@/components/detail/ProductInfo';
 import axios from 'axios';
 
 export default function ProductDetailPage({ productDetail }) {
