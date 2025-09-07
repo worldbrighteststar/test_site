@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './CartList.module.css';
 import { removeCartItem } from '@/api';
 import { useRouter } from 'next/router';
+import axios from 'axios';
 
 export default function CartList({ carts }) {
 	const router = useRouter();
@@ -11,8 +12,12 @@ export default function CartList({ carts }) {
 	}, 0);
 
 	const removeCart = async id => {
-		const { data } = await removeCartItem(id);
-		alert(`${data.name} is deleted`);
+		const { data } = await axios.post('http://localhost:3000/api/carts', {
+			id: id,
+		});
+		console.log(data);
+		// const { data } = await removeCartItem(id);
+		// alert(`${data.name} is deleted`);
 		router.replace(router.asPath); //This leads reload the current page
 	};
 

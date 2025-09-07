@@ -181,12 +181,5 @@
       "imageUrl": "https://cdn.pixabay.com/user/2024/03/23/18-39-42-304_250x250.jpg"
     }
   ],
-  "carts": [
-    {
-      "id": "2",
-      "name": "Handcrafted Frozen Pizza",
-      "imageUrl": "https://cdn.pixabay.com/user/2016/06/01/15-27-35-456_250x250.jpg",
-      "price": "315.00"
-    }
-  ]
+  "carts": []
 }
