@@ -1,14 +1,19 @@
 import Image from 'next/image';
 import styles from './CartList.module.css';
 import { removeCartItem } from '@/api';
+import { useRouter } from 'next/router';
 
 export default function CartList({ carts }) {
+	const router = useRouter();
+
 	const totalPrice = carts.reduce((acc, cur) => {
 		return acc + parseFloat(cur.price);
 	}, 0);
 
 	const removeCart = async id => {
-		removeCartItem(id);
+		const { data } = await removeCartItem(id);
+		alert(`${data.name} is deleted`);
+		router.replace(router.asPath); //This leads reload the current page
 	};
 
 	return (
